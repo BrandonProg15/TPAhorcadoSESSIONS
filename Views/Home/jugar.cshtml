@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Jugar";
+}
+
+<h1>@ViewBag.Palabra</h1>
+
+<p><strong>Letras utilizadas:</strong> @ViewBag.Usadas</p>
+<p><strong>Intentos:</strong> @ViewBag.Intentos</p>
+
+<form method="get" action="@Url.Action("ArriesgarLetra", "Home")">
+    <label>Nueva Letra</label><br />
+    <input type="text" name="letra" maxlength="1" required /><br /><br />
+    <input type="submit" value="Arriesgar Letra" />
+</form>
+
+<br />
+
+<form method="get" action="@Url.Action("ArriesgarPalabra", "Home")">
+    <label>Palabra a Arriesgar</label><br />
+    <input type="text" name="palabra" required /><br /><br />
+    <input type="submit" value="Arriesgar Palabra" />
+</form>
