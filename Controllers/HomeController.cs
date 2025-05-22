@@ -2,12 +2,16 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using AhorcadoTP04.Models;
 
+
 namespace AhorcadoTP04.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-
+   
+      
+        
+        
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
@@ -46,4 +50,5 @@ public class HomeController : Controller
             ViewBag.Mensaje = TempData["Mensaje"];
             return View();
         }
+        
     }
